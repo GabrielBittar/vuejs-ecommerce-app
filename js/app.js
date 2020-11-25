@@ -2,7 +2,7 @@ new Vue({
     el: '#app',
     data: {
         products: [
-            { 
+            {
                 id: 1,
                 name: 'MacBook Pro (15 inch)',
                 description: 'This laptop has a super crisp Retina display. Yes, we know that it\'s overpriced...',
@@ -45,5 +45,15 @@ new Vue({
                 inStock: 81
             }
         ]
+    },
+    filters: {
+        currency: function(value){
+            var formatter = Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'USD',
+                minimumFractionDigits: 0
+            });
+            return formatter.format(value);
+        }
     }
 });
