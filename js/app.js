@@ -2,7 +2,7 @@ new Vue({
     el: '#app',
     data: {
         products: [
-            {
+            { 
                 id: 1,
                 name: 'MacBook Pro (15 inch)',
                 description: 'This laptop has a super crisp Retina display. Yes, we know that it\'s overpriced...',
